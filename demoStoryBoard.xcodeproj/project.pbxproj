@@ -15,6 +15,8 @@
 		E7C7B6661DBA310A001A99EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C7B6641DBA310A001A99EE /* LaunchScreen.storyboard */; };
 		E7C7B6711DBA310B001A99EE /* demoStoryBoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C7B6701DBA310B001A99EE /* demoStoryBoardTests.m */; };
 		E7C7B67C1DBA310B001A99EE /* demoStoryBoardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C7B67B1DBA310B001A99EE /* demoStoryBoardUITests.m */; };
+		E7C7B68A1DBAFCC0001A99EE /* Images in Resources */ = {isa = PBXBuildFile; fileRef = E7C7B6891DBAFCC0001A99EE /* Images */; };
+		E7C7B68D1DBAFEA0001A99EE /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C7B68C1DBAFEA0001A99EE /* PlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		E7C7B6771DBA310B001A99EE /* demoStoryBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demoStoryBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C7B67B1DBA310B001A99EE /* demoStoryBoardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = demoStoryBoardUITests.m; sourceTree = "<group>"; };
 		E7C7B67D1DBA310B001A99EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7C7B6891DBAFCC0001A99EE /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		E7C7B68B1DBAFEA0001A99EE /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		E7C7B68C1DBAFEA0001A99EE /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +109,8 @@
 				E7C7B6591DBA310A001A99EE /* AppDelegate.h */,
 				E7C7B65A1DBA310A001A99EE /* AppDelegate.m */,
 				E7C7B65C1DBA310A001A99EE /* ViewController.h */,
+				E7C7B68B1DBAFEA0001A99EE /* PlayerViewController.h */,
+				E7C7B68C1DBAFEA0001A99EE /* PlayerViewController.m */,
 				E7C7B65D1DBA310A001A99EE /* ViewController.m */,
 				E7C7B65F1DBA310A001A99EE /* Main.storyboard */,
 				E7C7B6621DBA310A001A99EE /* Assets.xcassets */,
@@ -117,6 +124,7 @@
 		E7C7B6561DBA310A001A99EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7C7B6891DBAFCC0001A99EE /* Images */,
 				E7C7B6571DBA310A001A99EE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -249,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C7B68A1DBAFCC0001A99EE /* Images in Resources */,
 				E7C7B6661DBA310A001A99EE /* LaunchScreen.storyboard in Resources */,
 				E7C7B6631DBA310A001A99EE /* Assets.xcassets in Resources */,
 				E7C7B6611DBA310A001A99EE /* Main.storyboard in Resources */,
@@ -277,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7C7B65E1DBA310A001A99EE /* ViewController.m in Sources */,
+				E7C7B68D1DBAFEA0001A99EE /* PlayerViewController.m in Sources */,
 				E7C7B65B1DBA310A001A99EE /* AppDelegate.m in Sources */,
 				E7C7B6581DBA310A001A99EE /* main.m in Sources */,
 			);
