@@ -18,6 +18,7 @@
 		E7C7B68A1DBAFCC0001A99EE /* Images in Resources */ = {isa = PBXBuildFile; fileRef = E7C7B6891DBAFCC0001A99EE /* Images */; };
 		E7C7B68D1DBAFEA0001A99EE /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C7B68C1DBAFEA0001A99EE /* PlayerViewController.m */; };
 		E7C7B6901DBB0182001A99EE /* Players.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C7B68F1DBB0182001A99EE /* Players.m */; };
+		E7C7B6931DBB4A9C001A99EE /* PlayerViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C7B6921DBB4A9C001A99EE /* PlayerViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		E7C7B68C1DBAFEA0001A99EE /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		E7C7B68E1DBB0182001A99EE /* Players.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Players.h; path = ../Players.h; sourceTree = "<group>"; };
 		E7C7B68F1DBB0182001A99EE /* Players.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Players.m; path = ../Players.m; sourceTree = "<group>"; };
+		E7C7B6911DBB4A9C001A99EE /* PlayerViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewDataSource.h; sourceTree = "<group>"; };
+		E7C7B6921DBB4A9C001A99EE /* PlayerViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +116,12 @@
 				E7C7B65A1DBA310A001A99EE /* AppDelegate.m */,
 				E7C7B68E1DBB0182001A99EE /* Players.h */,
 				E7C7B68F1DBB0182001A99EE /* Players.m */,
+				E7C7B6911DBB4A9C001A99EE /* PlayerViewDataSource.h */,
+				E7C7B6921DBB4A9C001A99EE /* PlayerViewDataSource.m */,
 				E7C7B65C1DBA310A001A99EE /* ViewController.h */,
+				E7C7B65D1DBA310A001A99EE /* ViewController.m */,
 				E7C7B68B1DBAFEA0001A99EE /* PlayerViewController.h */,
 				E7C7B68C1DBAFEA0001A99EE /* PlayerViewController.m */,
-				E7C7B65D1DBA310A001A99EE /* ViewController.m */,
 				E7C7B65F1DBA310A001A99EE /* Main.storyboard */,
 				E7C7B6621DBA310A001A99EE /* Assets.xcassets */,
 				E7C7B6641DBA310A001A99EE /* LaunchScreen.storyboard */,
@@ -294,6 +299,7 @@
 				E7C7B6901DBB0182001A99EE /* Players.m in Sources */,
 				E7C7B68D1DBAFEA0001A99EE /* PlayerViewController.m in Sources */,
 				E7C7B65B1DBA310A001A99EE /* AppDelegate.m in Sources */,
+				E7C7B6931DBB4A9C001A99EE /* PlayerViewDataSource.m in Sources */,
 				E7C7B6581DBA310A001A99EE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

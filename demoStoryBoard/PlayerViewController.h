@@ -10,6 +10,6 @@
 
 @interface PlayerViewController : UITableViewController
 
-@property(nonatomic,strong)NSMutableArray *players;
+@property(nonatomic,assign)NSMutableArray *players;
 
 @end

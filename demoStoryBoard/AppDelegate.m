@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Players.h"
 #import "PlayerViewController.h"
+#import "PlayerViewDataSource.h"
 
 @interface AppDelegate ()
 
@@ -16,38 +17,34 @@
 
 @implementation AppDelegate
 {
-    NSMutableArray *PlayersTemp;
+    NSMutableArray *players;
 }
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    PlayersTemp = [NSMutableArray arrayWithCapacity:20];
-    Players *player = [[Players alloc]init];
-    player.name = @"SlowOne";
-    player.game = @"Flatball";
-    player.rating = 4;
-    [PlayersTemp addObject:player];
-    player.name = @"FastOne";
-    player.game = @"BeachUltimate";
-    player.rating = 3 ;
-    [PlayersTemp addObject:player];
-    player.name = @"GoodOne";
-    player.game = @"GoalUltimate";
-    player.rating = 5;
-    [PlayersTemp addObject:player];
-    
+    PlayerViewDataSource *dataSource = [[PlayerViewDataSource alloc]init];
+    NSMutableArray *datasourceForTableView = [dataSource createTheDataSource];
+    NSMutableArray *arrayPersonName = [NSMutableArray arrayWithObjects:@"Bob",@"Norbert",@"Leah",@"Chris",@"Same", nil];
+    NSMutableArray *arrayPersonGame = [NSMutableArray arrayWithObjects:@"Frisbee",@"FlatBall",@"Football",@"BaseBall",@"Cricket", nil];
+    Players *player;
+    if (!players)
+    {
+	  players = [NSMutableArray arrayWithCapacity:20];
+    }
+    for(int i = 0 ; i < 10 ; i++)
+    {
+	  player = [[Players alloc] init];
+	  player.name = [arrayPersonName objectAtIndex:(rand()% [arrayPersonName count])];
+	  player.game = [arrayPersonGame objectAtIndex:(rand() % [arrayPersonGame count])];
+	  [player setValue:[NSNumber numberWithInt:(rand() % 5)] forKey:@"rating"];
+	  [players addObject:player];
+    }
     UITabBarController *tabBarItem = (UITabBarController*)[[self window] rootViewController];
     
     UINavigationController *navigationBar = [[tabBarItem viewControllers] objectAtIndex:0];
     
     PlayerViewController *playerViewController = [[navigationBar viewControllers] objectAtIndex:0];
-    
-    [playerViewController setValue:PlayersTemp forKey:@"players"];
-    
-    //[playerViewController setPlayers:PlayersTemp];
-   // playerViewController.players = PlayersTemp;
-
+    playerViewController.players = players;
     return YES;
 }
 
