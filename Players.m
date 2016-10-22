@@ -10,4 +10,8 @@
 
 @implementation Players
 
+@synthesize name;
+@synthesize game;
+@synthesize rating;
+
 @end

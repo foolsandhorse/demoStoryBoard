@@ -6,14 +6,18 @@
 //  Copyright © 2016 Norbert Henry. All rights reserved.
 //
 
+#import "Players.h"
 #import "PlayerViewController.h"
 
 @interface PlayerViewController ()
 
 @end
 
+
+
 @implementation PlayerViewController
 
+@synthesize players;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -33,23 +37,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    return [[self players] count];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView
+				     dequeueReusableCellWithIdentifier:@"PlayerCell"];
+    Players *player = [self.players objectAtIndex:indexPath.row];
+    cell.textLabel.text = player.name;
+    cell.detailTextLabel.text = player.game;
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
