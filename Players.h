@@ -1,13 +1,13 @@
 //
-//  ViewController.h
+//  Players.h
 //  demoStoryBoard
 //
 //  Created by Norbert Henry on 10/21/16.
 //  Copyright © 2016 Norbert Henry. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ViewController : UIViewController
+@interface Players : NSObject
 
 @end
