@@ -7,6 +7,7 @@
 //
 
 #import "Players.h"
+#import "PlayerCell.h"
 #import "PlayerViewController.h"
 
 @interface PlayerViewController ()
@@ -71,14 +72,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
+    PlayerCell *cell = (PlayerCell*) [tableView dequeueReusableCellWithIdentifier:@"CellPlayer"];
     Players *player = [self.players objectAtIndex:indexPath.row];
-    UILabel *label  = (UILabel*)[cell viewWithTag:100];
-    label.text = player.name;
-    UILabel *label2 = (UILabel*)[cell viewWithTag:101];
-    label2.text = player.game;
-    UIImageView *ratingImage = (UIImageView*)[cell viewWithTag:102];
-    ratingImage.image = [self imageRating:[player rating]];
+    cell.playername.text = player.name;
+    cell.playergame.text = player.game;
+    cell.ratingimage.image = [self imageRating:player.rating];
+//    UILabel *label  = (UILabel*)[cell viewWithTag:100];
+//    label.text = player.name;
+//    UILabel *label2 = (UILabel*)[cell viewWithTag:101];
+//    label2.text = player.game;
+//    UIImageView *ratingImage = (UIImageView*)[cell viewWithTag:102];
+//    ratingImage.image = [self imageRating:[player rating]];
     return cell;
 }
 

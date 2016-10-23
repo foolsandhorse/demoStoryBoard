@@ -19,6 +19,7 @@
 		E7C7B68D1DBAFEA0001A99EE /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C7B68C1DBAFEA0001A99EE /* PlayerViewController.m */; };
 		E7C7B6901DBB0182001A99EE /* Players.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C7B68F1DBB0182001A99EE /* Players.m */; };
 		E7C7B6931DBB4A9C001A99EE /* PlayerViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C7B6921DBB4A9C001A99EE /* PlayerViewDataSource.m */; };
+		E7C7B6961DBC4104001A99EE /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C7B6951DBC4104001A99EE /* PlayerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		E7C7B68F1DBB0182001A99EE /* Players.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Players.m; path = ../Players.m; sourceTree = "<group>"; };
 		E7C7B6911DBB4A9C001A99EE /* PlayerViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewDataSource.h; sourceTree = "<group>"; };
 		E7C7B6921DBB4A9C001A99EE /* PlayerViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewDataSource.m; sourceTree = "<group>"; };
+		E7C7B6941DBC4104001A99EE /* PlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCell.h; sourceTree = "<group>"; };
+		E7C7B6951DBC4104001A99EE /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				E7C7B6921DBB4A9C001A99EE /* PlayerViewDataSource.m */,
 				E7C7B65C1DBA310A001A99EE /* ViewController.h */,
 				E7C7B65D1DBA310A001A99EE /* ViewController.m */,
+				E7C7B6941DBC4104001A99EE /* PlayerCell.h */,
+				E7C7B6951DBC4104001A99EE /* PlayerCell.m */,
 				E7C7B68B1DBAFEA0001A99EE /* PlayerViewController.h */,
 				E7C7B68C1DBAFEA0001A99EE /* PlayerViewController.m */,
 				E7C7B65F1DBA310A001A99EE /* Main.storyboard */,
@@ -296,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7C7B65E1DBA310A001A99EE /* ViewController.m in Sources */,
+				E7C7B6961DBC4104001A99EE /* PlayerCell.m in Sources */,
 				E7C7B6901DBB0182001A99EE /* Players.m in Sources */,
 				E7C7B68D1DBAFEA0001A99EE /* PlayerViewController.m in Sources */,
 				E7C7B65B1DBA310A001A99EE /* AppDelegate.m in Sources */,
@@ -451,6 +457,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y8268QCY6;
 				INFOPLIST_FILE = demoStoryBoard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FoolsandHorses.demoStoryBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -463,6 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2Y8268QCY6;
 				INFOPLIST_FILE = demoStoryBoard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FoolsandHorses.demoStoryBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -538,6 +546,7 @@
 				E7C7B6821DBA310B001A99EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7C7B6831DBA310B001A99EE /* Build configuration list for PBXNativeTarget "demoStoryBoardTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +555,7 @@
 				E7C7B6851DBA310B001A99EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7C7B6861DBA310B001A99EE /* Build configuration list for PBXNativeTarget "demoStoryBoardUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +564,7 @@
 				E7C7B6881DBA310B001A99EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
