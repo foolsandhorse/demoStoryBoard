@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class PlayerViewController;
 @interface PlayerViewDataSource : NSObject
 
-@property(nonatomic,strong)NSMutableArray *players;
+@property(nonatomic,copy)NSMutableArray *players;
 
--(NSMutableArray*)createTheDataSource;
+-(void)createTheDataSource:(PlayerViewController*)playerViewControllerItem;
 @end

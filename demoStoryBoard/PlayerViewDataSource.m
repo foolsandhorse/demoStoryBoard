@@ -13,14 +13,14 @@
 @implementation PlayerViewDataSource
 @synthesize players;
 
--(NSMutableArray*)createTheDataSource
+-(void)createTheDataSource:(PlayerViewController *)playerViewControllerItem
 {
-    NSMutableArray *arrayPersonName = [NSMutableArray arrayWithObjects:@"Bob",@"Norbert",@"Leah",@"Chris",@"Same", nil];
+    NSMutableArray *arrayPersonName = [NSMutableArray arrayWithObjects:@"Bob",@"Norbert",@"Leah",@"Chris",@"Sam", nil];
     NSMutableArray *arrayPersonGame = [NSMutableArray arrayWithObjects:@"Frisbee",@"FlatBall",@"Football",@"BaseBall",@"Cricket", nil];
     Players *player;
     if (!players)
     {
-	  players = [NSMutableArray arrayWithCapacity:20];
+	  players = [[NSMutableArray alloc]init];
     }
     for(int i = 0 ; i < 10 ; i++)
     {
@@ -30,6 +30,6 @@
 	  [player setValue:[NSNumber numberWithInt:(rand() % 5)] forKey:@"rating"];
 	  [players addObject:player];
     }
-    return players;
+    [playerViewControllerItem setValue:players forKey:@"players"];
 }
 @end

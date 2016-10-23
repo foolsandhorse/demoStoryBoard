@@ -10,6 +10,7 @@
 
 @interface PlayerViewController : UITableViewController
 
-@property(nonatomic,assign)NSMutableArray *players;
+@property(nonatomic,copy)NSMutableArray *players;
+-(UIImage*)imageRating:(int)rating;
 
 @end

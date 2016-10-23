@@ -16,35 +16,16 @@
 @end
 
 @implementation AppDelegate
-{
-    NSMutableArray *players;
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     PlayerViewDataSource *dataSource = [[PlayerViewDataSource alloc]init];
-    NSMutableArray *datasourceForTableView = [dataSource createTheDataSource];
-    NSMutableArray *arrayPersonName = [NSMutableArray arrayWithObjects:@"Bob",@"Norbert",@"Leah",@"Chris",@"Same", nil];
-    NSMutableArray *arrayPersonGame = [NSMutableArray arrayWithObjects:@"Frisbee",@"FlatBall",@"Football",@"BaseBall",@"Cricket", nil];
-    Players *player;
-    if (!players)
-    {
-	  players = [NSMutableArray arrayWithCapacity:20];
-    }
-    for(int i = 0 ; i < 10 ; i++)
-    {
-	  player = [[Players alloc] init];
-	  player.name = [arrayPersonName objectAtIndex:(rand()% [arrayPersonName count])];
-	  player.game = [arrayPersonGame objectAtIndex:(rand() % [arrayPersonGame count])];
-	  [player setValue:[NSNumber numberWithInt:(rand() % 5)] forKey:@"rating"];
-	  [players addObject:player];
-    }
     UITabBarController *tabBarItem = (UITabBarController*)[[self window] rootViewController];
     
     UINavigationController *navigationBar = [[tabBarItem viewControllers] objectAtIndex:0];
     
     PlayerViewController *playerViewController = [[navigationBar viewControllers] objectAtIndex:0];
-    playerViewController.players = players;
+    [dataSource createTheDataSource:playerViewController];
     return YES;
 }
 

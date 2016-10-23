@@ -45,14 +45,40 @@
     return [self.players count];
 }
 
+-(UIImage*)imageRating:(int)rating
+{
+    switch (rating)
+    {
+	  case 1:
+		return [UIImage imageNamed:@"1Star"];
+		break;
+	  case 2:
+		return [UIImage imageNamed:@"2Stars"];
+		break;
+	  case 3:
+		return [UIImage imageNamed:@"3Stars"];
+		break;
+	  case 4:
+		return [UIImage imageNamed:@"4Stars"];
+	  case 5:
+		return [UIImage imageNamed:@"5Stars"];
+		
+	  default:
+		break;
+    }
+    return nil;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView
-				     dequeueReusableCellWithIdentifier:@"PlayerCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlayerCell"];
     Players *player = [self.players objectAtIndex:indexPath.row];
-    cell.textLabel.text = player.name;
-    cell.detailTextLabel.text = player.game;
+    UILabel *label  = (UILabel*)[cell viewWithTag:100];
+    label.text = player.name;
+    UILabel *label2 = (UILabel*)[cell viewWithTag:101];
+    label2.text = player.game;
+    UIImageView *ratingImage = (UIImageView*)[cell viewWithTag:102];
+    ratingImage.image = [self imageRating:[player rating]];
     return cell;
 }
 
